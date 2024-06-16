@@ -2,10 +2,6 @@
 layout: default
 title: Revati Pawar
 ---
-
-# Revati Pawar
-![Profile Image](/assets/profile_icon.jpg)
-
 ## Data Scientist
 
 ### Education
