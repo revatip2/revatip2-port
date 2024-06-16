@@ -1,6 +1,6 @@
 ---
 ---
-
+@import "{{ site.theme }}";
 title: Revati Pawar
 logo: /assets/profile_icon.jpg
 description: Data Scientist Portfolio
