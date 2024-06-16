@@ -2,13 +2,14 @@
 layout: default
 title: Revati Pawar
 ---
-## Data Scientist
+## <a name="about"></a>About
+Data Scientist
 
-### Education
+## <a name="education"></a>Education
 **MS in Applied Data Science** | Expected Dec 2024  
 University of Southern California, CA
 
-### Work Experience
+## <a name="experience"></a>Work Experience
 
 **Data Science Intern**  
 Ford Motor Company, Dearborn, MI | May 2024 - Present  
@@ -38,18 +39,18 @@ Capgemini Technology Services, Pune, India | Mar 2020 - Jun 2020
 - Utilized advanced machine learning algorithms to analyze electronic health records, medical imaging scans, and wearable sensor data for knee osteoarthritis, improving diagnostic accuracy by 15%.
 - Collaborated with medical experts to refine the anomaly detection model using Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs), achieving a precision rate of 90% for identifying knee osteoarthritis.
 
-### Projects
+## <a name="projects"></a>Projects
 - **e-TA** - Developed a multimodal chatbot using Langchain, Llama2, RAG, and Pinecone in collaboration with USC, enhancing course content and logistics assistance through advanced query classification and prompt engineering.
 - **Market Basket Analysis for Customer Segmentation** - Implemented an optimized SON algorithm with Apriori for a grocery store transaction dataset with PySpark; identified frequent item sets and pinpointed high value customers.
 - **Yelp Recommender System** - Built a recommender system to predict user ratings using PySpark, combining collaborative filtering (Pearson similarity) and XGBoost with feature engineering, achieving an accuracy of 97%.
 - **Graph Analysis with PySpark: Community Detection** - Analyzed Yelp user data, creating a user-user graph based on business reviews, and detecting communities through label propagation and the Girvan-Newman algorithm.
 
-### Skills
+## <a name="skills"></a>Skills
 - **Programming Languages:** Python, R, Java, C, C++
 - **Libraries/Frameworks and Software:** MLOps, NLP, LLM, Git, GCP, Kubernetes, Spark, Hadoop, Docker, AWS, TensorFlow, Keras, PyTorch, Langchain, Pandas, NumPy, MapReduce, Flask, Linux, Vertex AI
 - **Databases:** MySQL, BigQuery, MongoDB, DynamoDB, PostgreSQL
 
-### Contact
+## <a name="contact"></a>Contact
 - [LinkedIn](https://www.linkedin.com/in/revatipawar29/)
 - [GitHub](https://github.com/revatip2)
 - Email: [rpawar@usc.edu](mailto:rpawar@usc.edu)
