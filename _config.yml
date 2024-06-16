@@ -1,15 +1,37 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 title: Revati Pawar
 logo: /assets/profile_icon.jpg
-#description: text below image
+description: Data Scientist Portfolio
 show_downloads: false
 theme: jekyll-theme-minimal
 
-# Social Links
-linkedin: https://www.linkedin.com/in/revatipawar29/
-email: rpawar@usc.edu
-github: https://github.com/revatip2
+# Social links
+social_links:
+  linkedin: "https://www.linkedin.com/in/revatipawar29/"
+  github: "https://github.com/revatip2"
+  email: "rpawar@usc.edu"
+
+# Navigation links
+nav:
+  - name: "About"
+    href: "#about"
+  - name: "Education"
+    href: "#education"
+  - name: "Experience"
+    href: "#experience"
+  - name: "Projects"
+    href: "#projects"
+  - name: "Skills"
+    href: "#skills"
+  - name: "Contact"
+    href: "#contact"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
