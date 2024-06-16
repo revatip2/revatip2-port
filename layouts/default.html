@@ -1,34 +1,239 @@
----
----
-
-@import "{{ site.theme }}";
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: "en-US" }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .left {
+            width: 30%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .left img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .left h2 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .left p {
+            color: #666;
+        }
+
+        .left .social-icons {
+            margin-top: 20px;
+        }
+
+        .left .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .right {
+            width: 70%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-left: 20px;
+        }
+
+        .right h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .right h3 {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #1a73e8;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>{{ site.title }}</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
     </header>
-    <main>
-        {{ content }}
-    </main>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <img src="{{ site.logo | relative_url }}" alt="Profile Picture">
+            <h2>Revati Pawar</h2>
+            <p>Data Scientist</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/revatipawar29/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/revatip2" target="_blank">GitHub</a>
+                <a href="mailto:rpawar@usc.edu">Email</a>
+            </div>
+        </div>
+        <div class="right">
+            <section id="about">
+                <h2>About</h2>
+                <p>Data Scientist</p>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <h3>MS in Applied Data Science | Expected Dec 2024</h3>
+                <p>University of Southern California, CA</p>
+            </section>
+            <section id="experience">
+                <h2>Work Experience</h2>
+                <h3>Data Science Intern</h3>
+                <p>Ford Motor Company, Dearborn, MI | May 2024 - Present</p>
+                <ul>
+                    <li>Utilize GCP tools such as BigQuery and Vertex AI to analyze sales data from 3K+ North America stores, achieving an increase in sales forecasting accuracy.</li>
+                    <li>Implement statistical models to analyze market trends and customer behavior, improving predictions of fluctuations in used car resale values and trade-in prices.</li>
+                </ul>
+                <h3>Software Engineering Intern</h3>
+                <p>University of Southern California, Los Angeles, CA | May 2023 - May 2024</p>
+                <ul>
+                    <li>Developed a full stack application incorporating REST APIs, Flask, Python, SQL, and React to streamline maintenance order requests for users, resulting in a 40% increase in efficiency for USC Facilities.</li>
+                    <li>Utilized ARIMA and LSTM models to predict equipment failures, resulting in a 15% increase in equipment uptime.</li>
+                    <li>Employed SQL to conduct in-depth analysis of the work orders database, identifying 10 operational inefficiencies and recommending solutions for improvement.</li>
+                    <li>Led migration of legacy systems to a new platform for purchase orders, resulting in zero data losses and increasing system efficiency by 30%.</li>
+                </ul>
+                <h3>Machine Learning Intern</h3>
+                <p>Information Sciences Institute, Los Angeles, CA | May 2023 - May 2024</p>
+                <ul>
+                    <li>Implemented network pruning techniques for Large Language Models within a distributed system architecture, reducing model size by 40% and improving inference speed by 50%.</li>
+                    <li>Utilized HPCC to run complex neural network simulations, optimizing hyperparameters and model architectures, resulting in a 30% increase in model accuracy.</li>
+                </ul>
+                <h3>Technology Analyst</h3>
+                <p>Deloitte Consulting (USI), Pune, India | Sep 2021 - Nov 2022</p>
+                <ul>
+                    <li>Developed end-to-end software integrations using REST APIs, Apache Spark, and ETL techniques, resulting in a 40% increase in data flow efficiency for client's workforce management systems.</li>
+                    <li>Led root cause analysis on production bugs, implementing long-term solutions that reduced data-related issues by an additional 20%, resulting in an overall reduction of 80%.</li>
+                    <li>Optimized CI/CD pipelines, increasing overall software development efficiency by 20%.</li>
+                </ul>
+                <h3>Machine Learning Intern</h3>
+                <p>Capgemini Technology Services, Pune, India | Mar 2020 - Jun 2020</p>
+                <ul>
+                    <li>Utilized advanced machine learning algorithms to analyze electronic health records, medical imaging scans, and wearable sensor data for knee osteoarthritis, improving diagnostic accuracy by 15%.</li>
+                    <li>Collaborated with medical experts to refine the anomaly detection model using Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs), achieving a precision rate of 90% for identifying knee osteoarthritis.</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li>**e-TA** - Developed a multimodal chatbot using Langchain, Llama2, RAG, and Pinecone in collaboration with USC, enhancing course content and logistics assistance through advanced query classification and prompt engineering.</li>
+                    <li>**Market Basket Analysis for Customer Segmentation** - Implemented an optimized SON algorithm with Apriori for a grocery store transaction dataset with PySpark; identified frequent item sets and pinpointed high value customers.</li>
+                    <li>**Yelp Recommender System** - Built a recommender system to predict user ratings using PySpark, combining collaborative filtering (Pearson similarity) and XGBoost with feature engineering, enhancing recommendation accuracy.</li>
+                    <li>**Sports Player Performance Predictor** - Devised a LSTM-based predictive model leveraging historical performance data for athletes to forecast future achievements; improved performance prediction by 20% compared to baseline methods.</li>
+                </ul>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, Java, SQL</li>
+                    <li><strong>Tools & Technologies:</strong> PySpark, BigQuery, Vertex AI, Flask, React</li>
+                    <li><strong>Machine Learning:</strong> LSTM, ARIMA, GANs, VAEs</li>
+                    <li><strong>Database Management:</strong> SQL, NoSQL</li>
+                    <li><strong>Data Analysis:</strong> Statistical Analysis, Data Visualization</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:rpawar@usc.edu">rpawar@usc.edu</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/revatipawar29/" target="_blank">https://www.linkedin.com/in/revatipawar29/</a></p>
+                <p>GitHub: <a href="https://github.com/revatip2" target="_blank">https://github.com/revatip2</a></p>
+            </section>
+        </div>
+    </div>
     <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
     </footer>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
 </body>
 </html>
