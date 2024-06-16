@@ -1,2 +1,2 @@
-# revatip2.github.io
+# Data Scientist
 Data Science Portfolio
